@@ -21,13 +21,12 @@ int IsFull(Queue q)
 }  
   
 Queue CreateQueue(int capacity)
-{  
-    Queue queue;  
-    queue = (Queue)malloc(sizeof(lqueue));  
+{    
+    Queue queue = (Queue)malloc(sizeof(lqueue));  
     if(queue==NULL){  
         return NULL;  
     }  
-    queue->Array = (int *)malloc(sizeof(int) *capacity);
+    queue->Array = (int *)malloc(sizeof(int)*capacity);
     if(queue->Array == NULL )
     {
         return NULL;  
