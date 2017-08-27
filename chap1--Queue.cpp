@@ -27,9 +27,9 @@ Queue CreateQueue(int capacity)
     if(queue==NULL){  
         return NULL;  
     }  
-    queue->Array = malloc(sizeof(int)*capacity);
+    queue->Array = (int *)malloc(sizeof(int) *capacity);
     if(queue->Array == NULL )
-    {  
+    {
         return NULL;  
     }  
     queue->capacity = capacity;
