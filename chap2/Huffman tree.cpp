@@ -11,9 +11,7 @@ typedef struct HuffmanTreeNode{
 }HuffmanTreeNode,*PtrHuffman;  
 
 
-/**
- * create
- */
+//create
 PtrHuffman createHuffmanTree(ElemType arr[]){
     PtrHuffman ptrArr[LENGTH];
     PtrHuffman ptr,pRoot=NULL;  
