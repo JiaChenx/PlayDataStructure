@@ -19,8 +19,8 @@ bitree createbitree(bitree bt)
     { 
         bt=(bitnode *)malloc(sizeof(bitnode)); 
         bt->date=m; 
-        bt->lchild=createbitree(bt->lchild); 
-        bt->rchild=createbitree(bt->rchild); 
+        createbitree(bt->lchild); 
+        createbitree(bt->rchild); 
     } 
     return bt; 
 }
@@ -117,9 +117,31 @@ int countbitreenode(bitree bt)
     printf("The number of the leaves of the bitree is %d.\n\n",bitreeleaf(bt)); 
 }
 
+void OperateBitree(bitree bt)
+{
+    printf("\n"); 
+    printf("The level traversal of the bitree is:\n\t"); 
+    leveltraverse(bt); 
+    printf("\n\n"); 
+    printf("The preorder traversal of the bitree is:\n\t"); 
+    preordertraverse(bt); 
+    printf("\n\n"); 
+    printf("The inorder traversal of the bitree is:\n\t"); 
+    inordertraverse(bt); 
+    printf("\n\n"); 
+    printf("The postorder traversal of the bitree is:\n\t"); 
+    postordertraverse(bt); 
+    printf("\n\n"); 
+    printf("The number of the bitreenode is %d.\n",countbitreenode(bt)); 
+    printf("The depth of the bitree is %d.\n",bitreedepth(bt)); 
+    printf("The number of the leaves of the bitree is %d.\n\n",bitreeleaf(bt)); 
+}
+
+
 int main()
 { 
     bitree bt;
-    bt=createbitree(bt); 
+    bt=createbitree(bt);
+    OperateBitree(bt); 
 }
 
